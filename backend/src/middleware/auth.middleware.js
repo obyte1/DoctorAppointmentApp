@@ -8,7 +8,7 @@ const authenticate = (req, res, next) => {
     req.user = jwt.verify(header.slice(7), process.env.JWT_SECRET);
     next();
   } catch (error) {
-    return failure(res, 401, 'Invalid or expired token.');
+    return failure(res, 401, 'Invalid or expired token...');
   }
 };
 
